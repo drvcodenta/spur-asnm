@@ -1,27 +1,23 @@
 import Chatbot from "./Chatbot"
+import Xarrow from "react-xarrows"
 
 function App() {
   return (
     <div className="h-screen flex justify-center items-center">
-      <p>
+      <p id="chatbot-text">
         click here to view chatbot
       </p>
       
-      <svg 
-        className="absolute top-80 left-[calc(56%)]"
-        width="300" 
-        height="300" 
-        viewBox="0 0 600 500"
-      >
-        <path
-          d="M 10 10 Q 400 200, 550 450"
-          stroke="black"
-          strokeWidth="2"
-          fill="none"
-        />
-      </svg>
+      <Xarrow
+        start="chatbot-text"
+        end="chatbot-circle"
+        color="black"
+        strokeWidth={1}
+        headSize={10}
+        path="smooth"
+      />
 
-      <div className="fixed bottom-10 right-90">
+      <div className="fixed bottom-10 right-10">
         <Chatbot />
       </div>
     </div>

@@ -5,7 +5,7 @@ function Chatbot() {
 
   return (
     <>
-      <button onClick={() => setIsOpen(!isOpen)} className="w-16 h-16 rounded-full border-2">
+      <button id="chatbot-circle" onClick={() => setIsOpen(!isOpen)} className="w-16 h-16 rounded-full border-2">
         O
       </button>
 
