@@ -4,6 +4,8 @@ import botLogo from "./assets/bot-logo.png"
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState("")
 
   // Show circle button when closed
   if (!isOpen) {
@@ -49,10 +51,17 @@ function Chatbot() {
         <div className="flex items-center gap-2 border-2 border-blue-400 rounded-full px-4 py-2">
           <input 
             type="text" 
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder="Type your message..." 
             className="flex-1 outline-none"
           />
-          <button className="bg-blue-500 text-white w-8 h-8 rounded-full">➤</button>
+          <button 
+            disabled={!message.trim() || isLoading}
+            className={`text-white w-8 h-8 rounded-full ${!message.trim() || isLoading ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}
+          >
+            ➤
+          </button>
         </div>
       </div>
     </motion.div>
