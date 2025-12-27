@@ -1,18 +1,30 @@
-import { motion } from "framer-motion"
+import Chatbot from "./Chatbot"
 
 function App() {
-
   return (
-    <>
-    <motion.div
-    initial={{ opacity:0.5, scale:0.5}}
-    animate={{ opacity:1, scale:1}}
-    transition={{ duration:0.5}}
-    >
-      this is a frmaer component
-    </motion.div>
-      <h1>Vite + React</h1>
-    </>
+    <div className="h-screen flex justify-center items-center">
+      <p>
+        click here to view chatbot
+      </p>
+      
+      <svg 
+        className="absolute top-80 left-[calc(56%)]"
+        width="300" 
+        height="300" 
+        viewBox="0 0 600 500"
+      >
+        <path
+          d="M 10 10 Q 400 200, 550 450"
+          stroke="black"
+          strokeWidth="2"
+          fill="none"
+        />
+      </svg>
+
+      <div className="fixed bottom-10 right-90">
+        <Chatbot />
+      </div>
+    </div>
   )
 }
 
