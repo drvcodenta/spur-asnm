@@ -11,7 +11,7 @@ function Chatbot() {
       <button 
         id="chatbot-circle"
         onClick={() => setIsOpen(true)} 
-        className="w-16 h-16 rounded-full border-2 border-blue-500 flex items-center justify-center bg-white overflow-hidden"
+        className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-white overflow-hidden"
       >
         <img src={botLogo} alt="Chatbot" className="w-full h-full object-cover" />
       </button>
