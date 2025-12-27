@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
+import botLogo from "./assets/bot-logo.png"
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,9 +11,9 @@ function Chatbot() {
       <button 
         id="chatbot-circle"
         onClick={() => setIsOpen(true)} 
-        className="w-16 h-16 rounded-full border-2 flex items-center justify-center bg-white"
+        className="w-16 h-16 rounded-full border-2 border-blue-500 flex items-center justify-center bg-white overflow-hidden"
       >
-        O
+        <img src={botLogo} alt="Chatbot" className="w-full h-full object-cover" />
       </button>
     )
   }
