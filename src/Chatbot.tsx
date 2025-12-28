@@ -46,7 +46,7 @@ function Chatbot() {
       
     } catch (error) {
       // Show error to user
-      const errorMsg = { id: Date.now() + 1, text: "Error connecting to server. Please try again.", sender: "bot" }
+      const errorMsg = { id: Date.now() + 1, text: `Error connecting to server. Please try again.${error}`, sender: "bot" }
       setMessages(prev => [...prev, errorMsg])
     } finally {
       setIsTyping(false)
