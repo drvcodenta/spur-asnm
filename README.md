@@ -1,0 +1,1 @@
+i couldn't complete storing the session_id in the cache which could be reused to fetch the chatbot previous chats after lifecycle ends in time
