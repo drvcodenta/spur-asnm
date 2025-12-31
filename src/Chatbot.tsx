@@ -58,8 +58,13 @@ function Chatbot() {
     } catch (error) {
       // Show error to user
       let errMsg = "Error connecting to server. Please try again."
-      if (error && typeof error === 'object' && error.message) {
-        errMsg += ` (${error.message})`
+      if (
+        error &&
+        typeof error === 'object' &&
+        'message' in error &&
+        typeof (error as { message?: unknown }).message === 'string'
+      ) {
+        errMsg += ` (${(error as { message: string }).message})`
       } else if (typeof error === 'string') {
         errMsg += ` (${error})`
       }
