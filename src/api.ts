@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3001';
+const API_BASE_URL = 'https://spurasnmback.onrender.com/';
 
 export const chatAPI = {
     async sendMessage(message: string, sessionId?: string) {
