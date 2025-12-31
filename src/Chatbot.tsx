@@ -84,7 +84,7 @@ function Chatbot() {
       {/* Header */}
       <div className="flex gap-3 p-4 bg-blue-600 text-white rounded-t-lg">
         <img src={botLogo} alt="Spur" className="w-8 h-8 rounded-full" />
-        <h3 className="flex-1 font-semibold">Spur Support</h3>
+        <h3 className="flex-1 font-semibold">Shoe Shop Support</h3>
         <button onClick={() => setIsOpen(false)} className="text-xl">✕</button>
       </div>
       
